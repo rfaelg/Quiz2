@@ -7,20 +7,42 @@ body {
   background-color: rgb(173, 216, 230);
   margin: 0;
   padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 1vh;
+  width: 80vw;
   font-family: Arial, sans-serif;
 }
 
+.siqueiraf {
+  width: 50vw;
+  height: 30vh;
+  background-image: url('999.png');
+  background-size: 50vh;
+  background-position: center;
+  background-repeat: no-repeat
+}
 
-
+.siqueirat {
+  width: 50vw;
+  height: 30vh;
+  background-image: url('1000.png');
+  background-position: center left;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat
+}
 
 
 
 main {
   background-color: white;
   padding: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   border-radius: 20px;
-  max-width: 500px;
-  margin: 30px auto;
+  width: 70vw;
+  margin: 0px ;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   border: none;
 }

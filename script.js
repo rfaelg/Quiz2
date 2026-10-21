@@ -77,15 +77,30 @@ function tocar_errado() {
 function tocar_correto() {
   correto.currentTime = 0;
   correto.play();
-}
+};
+//imagens do Siqueira 
+function mostrar_certo() {
+  const imagemf = document.getElementById('imagem');
+  imagemf.classList.remove('siqueiraf','siqueirat')
+  imagemf.classList.add('siqueiraf');
+  console.log(imagemf.classList);
+};
+
+function mostrar_errado() {
+  const imagemt = document.getElementById('imagem');
+  imagemt.classList.remove('siqueiraf','siqueirat')
+  imagemt.classList.add('siqueirat');
+  console.log(imagemt.classList)
+};
+
 //verificando se tá certo
  function checar_resposta(opcao_escolhida) {
   if (opcao_escolhida === questoes[questao].certa) {
-    tocar_correto()
-    mostrarMensagem('🎉 Parabéns! Correto!', '#27ae60');
+    mostrar_certo();
+    tocar_correto();
   } else {
+    mostrar_errado();
     tocar_errado();
-    mostrarMensagem('😯 Ops! Tente de novo!', '#e74c3c');
   }
   proxima_questao();
 }
@@ -97,24 +112,5 @@ function proxima_questao() {
     perguntar();
   } else {
     parabens.play();
-    mostrarMensagem('🎊 Parabéns! Você terminou!', '#3498db');
   }
-}
-
-
-function mostrarMensagem(texto, cor) {
-  const msg = document.getElementById('msg');
-  msg.textContent = texto;
-  msg.style.display = 'block';
-  msg.style.backgroundColor = cor;
-  msg.style.color = 'white';
-  msg.style.padding = '12px';
-  msg.style.borderRadius = '8px';
-  msg.style.textAlign = 'center';
-  msg.style.fontSize = '20px';
-  msg.style.fontWeight = 'bold';
-  msg.style.marginTop = '20px';
-  setTimeout(() => {
-    msg.style.display = 'none';
-  }, 2500);
-}
+};
