@@ -74,10 +74,14 @@ function tocar_errado() {
   errado.currentTime = 0;
   errado.play();
 }
+function tocar_correto() {
+  correto.currentTime = 0;
+  correto.play();
+}
 //verificando se tá certo
  function checar_resposta(opcao_escolhida) {
   if (opcao_escolhida === questoes[questao].certa) {
-    correto.play();
+    tocar_correto()
     mostrarMensagem('🎉 Parabéns! Correto!', '#27ae60');
   } else {
     tocar_errado();
